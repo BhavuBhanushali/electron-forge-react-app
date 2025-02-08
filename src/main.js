@@ -21,7 +21,10 @@ const createWindow = () => {
 
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
-  app.getAppPath(), dialog.showMessageBox(mainWindow, { message: resourcePath });
+
+  // const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
+  // app.getAppPath(),
+  //  dialog.showMessageBox(mainWindow, { message: resourcePath });
 
 };
 
@@ -48,7 +51,6 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
-const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
 
 
 

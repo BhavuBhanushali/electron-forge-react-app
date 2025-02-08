@@ -12,7 +12,7 @@ rules.push({
     loader: "url-loader",
     options: {
       outputPath: "/",
-      publicPath: "/src/assets/images",
+      publicPath: "/assets/images",
       name: "[path][name].[ext]",
       esModule: false,
     },

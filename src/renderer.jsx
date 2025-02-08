@@ -1,7 +1,7 @@
 // src/renderer.jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import imag from './assets/passport-bhb.jpg'
+import imag from '/assets/Cristiano_Ronaldo.jpg'
 
 function App() {
   return (
