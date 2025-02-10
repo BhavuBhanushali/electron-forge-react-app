@@ -1,5 +1,7 @@
 const { app, BrowserWindow, dialog } = require('electron');
 const path = require('node:path');
+const db = require("./db/db");
+//  require("./db/db");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -22,6 +24,9 @@ const createWindow = () => {
   // Open the DevTools.
   mainWindow.webContents.openDevTools();
 
+  const resourcePath = path.join(app.getAppPath(), 'src', 'migration');
+  console.log("resourcePath=-=-=-=--=---=-=-->>", resourcePath);
+  
   // const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
   // app.getAppPath(),
   //  dialog.showMessageBox(mainWindow, { message: resourcePath });
