@@ -46,6 +46,7 @@
   "dependencies": {
     "antd": "^4.19.3",
     "better-sqlite3": "^11.8.1",
+    "dicom-dimse-native": "^2.4.6",
     "electron-squirrel-startup": "^1.0.1",
     "moment": "^2.30.1",
     "react": "^18.3.1",

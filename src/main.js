@@ -1,12 +1,15 @@
 const { app, BrowserWindow, dialog } = require('electron');
 const path = require('node:path');
 const db = require("./db/db");
+const output = require("./dicomService");
 //  require("./db/db");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
   app.quit();
 }
+console.log("output=-=-=--->>", output);
+
 
 const createWindow = () => {
   // Create the browser window.
