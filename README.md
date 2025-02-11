@@ -1,5 +1,5 @@
 # Build a Secure Desktop App with React and Electron
-"# electron-forge-react-app" 
+### electron-forge-react-app
 
 A small text editor desktop application, called "scratchpad", that automatically saves changes as you type.
 
@@ -12,9 +12,9 @@ Built using Electron and React and [Electron Forge](https://www.electronforge.io
 ## Installation Steps
 
 1. Clone repo
-2. Run `npm install`
-3. Run `npm run start` to launch the app
-4. Run `npm run make` to build the app
+2. Run `npm install or yarn`
+3. Run `npm run start or yarn start` to launch the app
+4. Run `npm run make or yarn make` to build the app
 
 ## License
 
