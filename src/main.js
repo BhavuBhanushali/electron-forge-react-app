@@ -22,11 +22,7 @@ const createWindow = () => {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
-
-  const resourcePath = path.join(app.getAppPath(), 'src', 'migration');
-  console.log("resourcePath=-=-=-=--=---=-=-->>", resourcePath);
-  
+  mainWindow.webContents.openDevTools();  
   // const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
   // app.getAppPath(),
   //  dialog.showMessageBox(mainWindow, { message: resourcePath });
