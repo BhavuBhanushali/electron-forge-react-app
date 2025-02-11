@@ -30,7 +30,11 @@
     "css-loader": "^6.0.0",
     "electron": "34.1.1",
     "electron-rebuild": "^3.2.9",
+    "less": "^4.2.2",
+    "less-loader": "^12.2.0",
     "node-loader": "^2.0.0",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
     "style-loader": "^3.0.0"
   },
   "keywords": [],
@@ -40,6 +44,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "antd": "^4.19.3",
     "better-sqlite3": "^11.8.1",
     "electron-squirrel-startup": "^1.0.1",
     "moment": "^2.30.1",
