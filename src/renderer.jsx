@@ -1,6 +1,5 @@
-// src/renderer.jsx
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import imag from "/assets/Cristiano_Ronaldo.jpg";
 import Login from "./pages/Login";
 import 'antd/dist/antd.less';
@@ -15,4 +14,4 @@ function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("app"));
+createRoot(document.getElementById("app")).render(<App />, );
