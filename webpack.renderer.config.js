@@ -87,4 +87,14 @@ module.exports = {
   module: {
     rules,
   },
+  resolve: {
+    fallback: {
+      fs: false, // Disable Node.js modules in renderer
+      path: require.resolve("path-browserify"),
+    },
+  },
+  externals: {
+    localforage: "commonjs localforage", // Ensure correct bundling
+  },
+  target: "web",
 };
