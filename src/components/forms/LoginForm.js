@@ -5,6 +5,7 @@ import TextField from '../fields/TextField'
 import Text from 'antd/lib/typography/Text'
 
 
+
 const validate = values => {
     const errors = {};
     if (!values.email) {
@@ -18,9 +19,9 @@ const validate = values => {
     return errors;
 };
 const LoginForm = ({ handleSubmit, invalid, pristine, submitting, errorMessage }) => {
-    console.log("error=-=--=-=--=--=-=->>>", errorMessage);
+    // console.log("error=-=--=-=--=--=-=->>>", errorMessage);
     return (
-        <Form onSubmit={handleSubmit} className="login-form">
+        <Form onSubmit={handleSubmit} className="login-form" layout='vertical'>
             <Form.Item>
                 <Field
                     name="email"

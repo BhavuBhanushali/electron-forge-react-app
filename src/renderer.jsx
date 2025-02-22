@@ -5,8 +5,10 @@ import Login from "./pages/Login";
 import "antd/dist/antd.less";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import configureStore from './store';
+import configureStore from "./store";
 import AppRoute from "./AppRoute";
+import MainLayout from "./Layout/MainLayout";
+import './styles/app.less'
 
 const { store, persistor } = configureStore();
 
@@ -16,10 +18,11 @@ function App() {
       <PersistGate loading={null} persistor={persistor}>
         {/* <div>
           <h1>Hello from React in Electron!</h1>
-          <img srcSet={imag} style={{ height: 100, width: 70 }} />
           <Login />
-        </div> */}
-        <AppRoute />
+          </div> */}
+          <img srcSet={imag} style={{ height: 100, width: 70,  }} />
+          <AppRoute />
+        {/* </MainLayout> */}
       </PersistGate>
     </Provider>
   );

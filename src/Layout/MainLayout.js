@@ -1,18 +1,19 @@
 import { Spin } from 'antd';
 import React from 'react';
-import { useNavigation } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const MainLayout = () => {
-    const navigation = useNavigation();
-    const isNavigating = Boolean(navigation.location);
+    // const navigation = useNavigate();
+    // const isNavigating = Boolean(navigation.location);
 
     return (
-        <html>
-            <body>
-                {isNavigating && <Spin />}
-                <Outlet />
-            </body>
-        </html>
+        <div>
+            {/* {isNavigating && <Spin />} */}
+            this is the main layout
+            <Outlet />
+        </div>
+
     );
 }
 export default MainLayout

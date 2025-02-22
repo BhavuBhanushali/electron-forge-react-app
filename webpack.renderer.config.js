@@ -65,7 +65,7 @@ rules.push({
     loader: "url-loader",
     options: {
       outputPath: "/",
-      publicPath: "/assets/images",
+      publicPath: "/assets/",
       name: "[path][name].[ext]",
       esModule: false,
     },

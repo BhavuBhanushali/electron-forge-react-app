@@ -4,8 +4,7 @@ import { Button, Card, Spin } from 'antd';
 // import { postLoginRequest } from 'actions/authActions';
 import LoginForm from '../components/forms/LoginForm';
 import { useNavigate } from 'react-router-dom'
-
-
+import imag from "/assets/login3.png";
 
 const Login = props => {
   // const dispatch = useDispatch();
@@ -31,13 +30,21 @@ const Login = props => {
 
 
   return (
-    <div className="login-container">
-      <Card className="login-card" title="Login">
-        <Spin spinning={loading}>
-          <LoginForm initialValues={{ email: 'bhaveshgajra4599@gmail.com', password: 'Gems@459' }} errorMessage={error} onSubmit={handleSubmit} />
-        </Spin>
-        <Button type='link' onClick={() => history("/home")}>Home</Button>
-      </Card>
+    <div className="login-root">
+      <div className="login-container">
+        <div className="login-left" style={{ background: `url(${imag}) no-repeat center` }}>
+          {/* <div className="login-overlay"> */}
+          {/* <h1>Welcome to Sneat!</h1> */}
+          {/* </div> */}
+        </div>
+        <div className='border' />
+        <div className="login-right">
+          <div className="login-form-container">
+            <h1>Login</h1>
+            <LoginForm initialValues={{ email: '', password: '' }} errorMessage={error} onSubmit={handleSubmit} />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
