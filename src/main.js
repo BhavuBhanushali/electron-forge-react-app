@@ -10,6 +10,7 @@ if (require('electron-squirrel-startup')) {
 
 const createWindow = () => {
   // Create the browser window.
+  const resourcePath = path.join(app.getAppPath(), 'assets', 'icons', 'png', '32x32.png');
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -17,13 +18,14 @@ const createWindow = () => {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
       nodeIntegration: true, // Enable Node.js integration
     },
+    icon: resourcePath
   });
 
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();  
+  mainWindow.webContents.openDevTools();
   // const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
   // app.getAppPath(),
   //  dialog.showMessageBox(mainWindow, { message: resourcePath });
