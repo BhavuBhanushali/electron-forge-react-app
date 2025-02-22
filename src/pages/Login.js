@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 // import { useDispatch } from 'react-redux';
-import { Card, Spin } from 'antd';
+import { Button, Card, Spin } from 'antd';
 // import { postLoginRequest } from 'actions/authActions';
 import LoginForm from '../components/forms/LoginForm';
+import { useNavigate } from 'react-router-dom'
+
 
 
 const Login = props => {
   // const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const history = useNavigate()
 
   const handleSubmit = formValues => {
     setLoading(true);
@@ -33,6 +36,7 @@ const Login = props => {
         <Spin spinning={loading}>
           <LoginForm initialValues={{ email: 'bhaveshgajra4599@gmail.com', password: 'Gems@459' }} errorMessage={error} onSubmit={handleSubmit} />
         </Spin>
+        <Button type='link' onClick={() => history("/home")}>Home</Button>
       </Card>
     </div>
   );

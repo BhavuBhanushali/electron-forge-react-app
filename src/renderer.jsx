@@ -6,6 +6,7 @@ import "antd/dist/antd.less";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import configureStore from './store';
+import AppRoute from "./AppRoute";
 
 const { store, persistor } = configureStore();
 
@@ -13,11 +14,12 @@ function App() {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <div>
+        {/* <div>
           <h1>Hello from React in Electron!</h1>
           <img srcSet={imag} style={{ height: 100, width: 70 }} />
           <Login />
-        </div>
+        </div> */}
+        <AppRoute />
       </PersistGate>
     </Provider>
   );
