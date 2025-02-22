@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Input } from 'antd'
 import Text from 'antd/lib/typography/Text'
-import Icon from '@ant-design/icons'
+import Icon, { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons'
 
 const FormItem = Form.Item
 
@@ -47,7 +47,7 @@ const TextField = ({ componentProps = {}, fieldProps = {}, input, meta, children
         if (type === 'password') {
             return (
                 <Input.Password
-                    iconRender={visible => (visible ? <Icon type="eye" /> : <Icon type="eye-invisible" />)}
+                iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
                     defaultValue={defaultValue} disabled={disabled} {...input} {...props}
                 />
             )
