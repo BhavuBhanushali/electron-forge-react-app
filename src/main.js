@@ -1,4 +1,4 @@
-const { app, BrowserWindow, dialog } = require('electron');
+const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('node:path');
 const db = require("./db/db");
 //  require("./db/db");
@@ -29,7 +29,10 @@ const createWindow = () => {
   // const resourcePath = path.join(app.getAppPath(), 'assets', 'passport-bhb.jpg');
   // app.getAppPath(),
   //  dialog.showMessageBox(mainWindow, { message: resourcePath });
-
+  ipcMain.handle('opendialogBox', (e, arg) => {
+    // dialog.showMessageBox(mainWindow, { message: "Hello World!!!" })
+    return true
+  })
 };
 
 // This method will be called when Electron has finished
