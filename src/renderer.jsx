@@ -20,7 +20,7 @@ function App() {
           <h1>Hello from React in Electron!</h1>
           <Login />
           </div> */}
-          <img srcSet={imag} style={{ height: 100, width: 70,  }} />
+          {/* <img srcSet={imag} style={{ height: 100, width: 70,  }} /> */}
           <AppRoute />
         {/* </MainLayout> */}
       </PersistGate>
