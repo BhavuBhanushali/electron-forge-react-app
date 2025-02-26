@@ -4,7 +4,7 @@ const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: 'assets/win/icon',
+    icon: './assets/icons/win/icon',
     extraResources: [
       {
         from: './assets', // Path to your extra resources directory
@@ -16,7 +16,9 @@ module.exports = {
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        setupIcon: './assets/icons/win/icon.ico'
+      },
     },
     {
       name: '@electron-forge/maker-zip',
