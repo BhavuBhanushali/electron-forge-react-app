@@ -98,10 +98,10 @@ function createWindow() {
     mainWindow.hide();
   });
 
-  mainWindow.on('minimize', (event) => {
-    event.preventDefault();
-    mainWindow.hide();
-  });
+  // mainWindow.on('minimize', (event) => {
+  //   // event.preventDefault();
+  //   // mainWindow.hide();
+  // });
 
   mainWindow.on('closed', () => {
     mainWindow = null;
