@@ -1,5 +1,7 @@
+const { message } = require('antd');
 const { app, BrowserWindow, ipcMain, Tray, nativeImage, Menu } = require('electron');
 const path = require('node:path');
+const { checkEmailExists } = require('./db/queries');
 
 let mainWindow = null;
 let tray = null;
@@ -114,4 +116,15 @@ function createWindow() {
 
 ipcMain.handle('opendialogBox', async (e, arg) => {
   return true;
+});
+
+ipcMain.handle('login', async (e, arg) => {
+
+  if (!arg?.email || !arg?.password) {
+    return { status: false, message: "username and password is required!" }
+  } else {
+    const response = await checkEmailExists(arg)
+    console.log("response arg=-=-=>>", response);
+    return { status: true, response };
+  }
 });

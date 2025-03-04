@@ -46,6 +46,7 @@ const LoginForm = ({ handleSubmit, invalid, pristine, submitting, errorMessage }
                     htmlType="submit"
                     disabled={invalid || pristine || submitting}
                     className="login-form-button"
+                    onClick={handleSubmit}
                 >
                     Log in
                 </Button>

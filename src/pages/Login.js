@@ -13,8 +13,12 @@ const Login = props => {
   const [error, setError] = useState('');
   const history = useNavigate()
 
-  const handleSubmit = formValues => {
-    setLoading(true);
+  const handleSubmit = async (formValues) => {
+    // setLoading(true);
+    console.log("--------------------------->>>", formValues);
+    
+    const response = await window.electronAPI.login(formValues);
+    console.log("response===>", response);
     // dispatch(
     //   postLoginRequest({
     //     ...formValues,
@@ -49,7 +53,7 @@ const Login = props => {
           <div className="login-right">
             <div className="login-form-container">
               <h1>Login</h1>
-              <LoginForm initialValues={{ email: '', password: '' }} errorMessage={error} onSubmit={handleSubmit} />
+              <LoginForm initialValues={{ email: 'bhavesh@gmail.com', password: 'test1234' }} errorMessage={error} onSubmit={handleSubmit} />
             </div>
           </div>
         </div>
