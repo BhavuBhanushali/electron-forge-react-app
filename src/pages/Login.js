@@ -15,22 +15,10 @@ const Login = props => {
 
   const handleSubmit = async (formValues) => {
     // setLoading(true);
-    console.log("--------------------------->>>", formValues);
-    
+    console.log("--------------------------->>>", formValues);    
     const response = await window.electronAPI.login(formValues);
     console.log("response===>", response);
-    // dispatch(
-    //   postLoginRequest({
-    //     ...formValues,
-    //     onSuccess: value => {
-    //       !value
-    //         ? setError('Invalid email or password. Please try again.')
-    //         : setError('');
-    //       setLoading(false);
-    //       value && props.history.push('/schedules');
-    //     },
-    //   })
-    // );
+    
   };
 
   const onClickTest = async () => {
